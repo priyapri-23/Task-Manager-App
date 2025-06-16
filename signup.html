@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">Task Manager</div>
+            <div class="auth-links">
+                <a href="index.html" class="btn">Home</a> <!-- ✅ Back to Homepage -->
+                <a href="login.html" class="btn">Login</a>
+                <a href="signup.html" class="btn">Signup</a>
+            </div>
+        </nav>
+
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
