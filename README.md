@@ -1,31 +1,49 @@
-<<<<<<< HEAD
 # Task-Manager-App
-=======
-# HTML, CSS, JS (Auto Refresh)
+Absolutely, Priya! Based on the structure of your **Task Manager App**—which includes user authentication, task management via CRUD operations, and a clean frontend built with HTML, CSS, and JavaScript, here’s a refined `README.md` that showcases your project’s functionality clearly and professionally:
 
-This template is a starter for building a website with HTML, CSS and JS, powered by [Vite](https://vitejs.dev/). HTML provides the basic structure, CSS controls formatting, and JavaScript controls the behavior of different elements.
+---
 
-Hit run to see this project in action. It will auto-refresh as you edit the HTML, CSS and JS files.
+## 🚀 Task Manager App
 
-## Disable Auto Refresh
+A full-stack task management web app that allows users to sign up, log in, and efficiently manage their daily tasks. Built using **Node.js**, **Express**, and **MongoDB** for the backend, with a dynamic frontend using **HTML, CSS, and JavaScript**.
 
-If you find the auto refresh getting in your way, go to [vite.config.js](./vite.config.js) and update it set `hmr` to false to disable hot module reloading (HMR). The full config will look like this:
+### ✨ Features
+- 🔐 **User Authentication**: Secure sign-up and login pages with basic validation
+- 📝 **Task Management**: Create, Read, Update, and Delete tasks (CRUD)
+- 📊 **Dashboard View**: Organized task display and real-time updates
+- 🎨 **Responsive Frontend**: Clean, user-friendly UI styled with custom CSS
+- ⚡ **Built with Vite**: Fast development experience with auto-refresh
 
-```js
-export default defineConfig({
-  plugins: [],
-  server: {
-    host: '0.0.0.0',
-    hmr: false, // Change this line to `false` disable auto-refreshing.
-  }
-})
+### 🛠️ Tech Stack
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express
+- **Database**: MongoDB (via Mongoose)
+- **Bundler**: Vite
+
+### 📦 Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/priyapri-23/Task-Manager-App.git
+cd Task-Manager-App
 ```
 
-## Packages
+Install dependencies:
+```bash
+npm install
+```
 
-Because this template uses Vite to build your code, you can add install and use npm packages. Simple open the Packager tool to search and manage your packages.
+Start the server:
+```bash
+npm run dev
+```
 
-## Learn More
+Visit the app:
+```
+http://localhost:3000
+```
 
-Check out [the vite docs](https://vitejs.dev) to learn more about configuring a frontend application.
->>>>>>> 39e5925 (Initial commit)
+> Note: Ensure MongoDB is running and connection URL is set in `.env` if used.
+
+### 📌 Status
+This project is under active development. Real-time analytics and role-based authentication are planned for future releases.
