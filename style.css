@@ -1,16 +1,3 @@
-/* ✅ General Styles */
-body {
-  /* body { */
-    overflow: visible; /* ✅ Ensure navbar isn't hidden */
-  /* } */
-
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
 /* ✅ Navigation Bar */
 .navbar {
     display: flex;
@@ -46,25 +33,18 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 button.delete-btn {
-    padding: 8px 15px;
+    padding: 4px 4px;
     background: #007BFF;
     color: #007BFF;
     text-decoration: none;
     border-radius: none;
-    margin-left: 300px;
+    margin-left: 30px;
     font-weight: bold;
 }
 
 
-button {
+/* button {
     width: 100%;
     padding: 10px;
     background: #007BFF;
@@ -72,19 +52,8 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 50px;
-}
-#addTask{
-    width: 100%;
-    padding: 10px;
-    background: #007BFF;
-    color: white;
-    border: black;
-    cursor: pointer;
-    border-radius: 50px
-    text-align: center;
-    text-emphasis-color: #111213;
-    
-}
+} */
+
 
 ul {
     list-style: none;
@@ -123,3 +92,56 @@ li {
     gap: 15px;
 }
 
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ✅ Input field styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px; /* Reduced from 120px and spaced correctly */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* ✅ Add Task button styling */
+button#addTask {
+  width: 100%;
+  padding: 12px;
+  background: #007BFF;
+  color: white;
+  border: none; /* was: black (invalid) */
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+button#addTask:hover {
+  background: #0056b3;
+}
+
+/* ✅ Container styling */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Body styling */
+body {
+  overflow: visible;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
