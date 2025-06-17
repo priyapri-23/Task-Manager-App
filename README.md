@@ -40,11 +40,6 @@ Start the server:
 npm run dev
 ```
 
-Visit the app:
-```
-http://localhost:3000
-```
-
 > Note: Ensure MongoDB is running and connection URL is set in `.env` if used.
 
 ### 📌 Status
