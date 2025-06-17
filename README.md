@@ -1,11 +1,13 @@
-# Task-Manager-App
-Absolutely, Priya! Based on the structure of your **Task Manager App**—which includes user authentication, task management via CRUD operations, and a clean frontend built with HTML, CSS, and JavaScript, here’s a refined `README.md` that showcases your project’s functionality clearly and professionally:
-
----
-
 ## 🚀 Task Manager App
 
 A full-stack task management web app that allows users to sign up, log in, and efficiently manage their daily tasks. Built using **Node.js**, **Express**, and **MongoDB** for the backend, with a dynamic frontend using **HTML, CSS, and JavaScript**.
+#Demo video
+
+
+
+https://github.com/user-attachments/assets/884941e4-f2c3-48b5-8a1a-edfce19cd124
+
+
 
 ### ✨ Features
 - 🔐 **User Authentication**: Secure sign-up and login pages with basic validation
