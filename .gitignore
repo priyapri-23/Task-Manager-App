@@ -120,7 +120,7 @@ dist
 .tern-port
 # Replit commit
 .replit
-
+.env
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 #replit commit

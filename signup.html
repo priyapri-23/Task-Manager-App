@@ -11,21 +11,36 @@
         <nav class="navbar">
             <div class="logo">Task Manager</div>
             <div class="auth-links">
-                <a href="index.html" class="btn">Home</a> <!-- ✅ Back to Homepage -->
+                <a href="index.html" class="btn">Home</a>
                 <a href="login.html" class="btn">Login</a>
                 <a href="signup.html" class="btn">Signup</a>
             </div>
         </nav>
-
         <h2>Sign Up</h2>
         <form id="signupForm">
             <input type="text" id="name" placeholder="Full Name" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
+            <div style="position:relative;">
+                <input type="password" id="password" placeholder="Password" required style="width:100%;">
+                <button type="button" id="togglePassword" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;">👁️</button>
+            </div>
+            <div id="message" style="margin:10px 0;color:red;"></div>
             <button type="submit">Sign Up</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>
     </div>
     <script src="signup.js"></script>
+    <script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const pwd = document.getElementById('password');
+        pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        this.textContent = pwd.type === 'password' ? '👁️' : '🙈';
+    });
+    window.showSignupMessage = function(msg, color='red') {
+        const el = document.getElementById('message');
+        el.textContent = msg;
+        el.style.color = color;
+    }
+    </script>
 </body>
 </html>

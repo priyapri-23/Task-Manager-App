@@ -18,9 +18,9 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // ✅ User & Task Schemas
 const UserSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    password: String,
+    name: { type: String, required: true, trim: true },
+    email: { type: String, required: true, unique: true, trim: true, lowercase: true },
+    password: { type: String, required: true },
 });
 
 const TaskSchema = new mongoose.Schema({
@@ -38,20 +38,26 @@ app.post("/signup", async (req, res) => {
         console.log("Received Signup Request:", req.body);
         const { name, email, password } = req.body;
 
+        if (!name || !email || !password) {
+            return res.status(400).json({ message: "All fields are required." });
+        }
         if (password.length < 6) {
             return res.status(400).json({ message: "Password must be at least 6 characters long!" });
         }
 
+        const existingUser = await User.findOne({ email: email.toLowerCase().trim() });
+        if (existingUser) {
+            return res.status(409).json({ message: "Email already registered." });
+        }
+
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ name, email, password: hashedPassword });
+        const newUser = new User({ name: name.trim(), email: email.toLowerCase().trim(), password: hashedPassword });
 
         await newUser.save();
-        console.log("User Saved:", newUser);
-
         res.json({ message: "Signup successful!" });
     } catch (error) {
         console.error("Signup Error:", error);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ message: "Server error. Please try again later." });
     }
 });
 

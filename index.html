@@ -14,7 +14,6 @@
             <a href="index.html" class="btn">Home</a>
             <a href="dashboard.html" class="btn">Tasks</a>
             <a href="login.html" class="btn">Login</a>
-            
             <a href="signup.html" class="btn">Signup</a>
         </div>
     </nav>
@@ -22,9 +21,19 @@
 
     <!-- ✅ Main Content Area -->
     <div class="container">
-        <h2>Stay Organized</h2>
+        <h2>Welcome to Task Manager</h2>
+        <p>Stay organized and boost your productivity! Manage your tasks efficiently with our simple and powerful to-do app.</p>
+        <ul>
+            <li>✅ Add, edit, and delete tasks</li>
+            <li>✅ Mark tasks as complete</li>
+            <li>✅ Access your tasks from anywhere</li>
+            <li>✅ Secure signup and login</li>
+        </ul>
+        <hr>
+        <h3>Try it now:</h3>
         <input type="text" id="taskInput" placeholder="Add a task...">
         <button id="addTask">Add Task</button>
+        <div id="index-message" style="margin:10px 0;color:green;"></div>
         <ul id="taskList">
             
         </ul>
@@ -33,6 +42,28 @@
     </div>
     
 
+    <script>
+    // Simple local demo for adding tasks
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTask');
+    const taskList = document.getElementById('taskList');
+    const msg = document.getElementById('index-message');
+
+    addTaskBtn.addEventListener('click', () => {
+        const task = taskInput.value.trim();
+        if (!task) {
+            msg.textContent = "Please enter a task.";
+            msg.style.color = "red";
+            return;
+        }
+        const li = document.createElement('li');
+        li.textContent = task;
+        taskList.appendChild(li);
+        taskInput.value = "";
+        msg.textContent = "Task added!";
+        msg.style.color = "green";
+    });
+    </script>
     <script src="dashboard.js"></script>
 </body>
 </html>

@@ -6,15 +6,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">Task Manager</div>
+        <div class="auth-links">
+            <a href="index.html" class="btn">Home</a>
+            <a href="dashboard.html" class="btn">Tasks</a>
+            <a href="#" id="logout" class="btn">Logout</a>
+        </div>
+    </nav>
     <div class="container">
-        <h2>Welcome to Your To-Do List</h2>
+        <h2>Your To-Do List</h2>
+        <div id="dashboard-message" style="margin:10px 0;color:green;"></div>
         <input type="text" id="taskInput" placeholder="Add a task">
         <button id="addTask">Add Task</button>
         <ul id="taskList"></ul>
-        <!-- <button class="delete-btn">❌</button> -->
-
-        <!-- <button id="logout">Logout</button> -->
     </div>
     <script src="dashboard.js"></script>
+    <script>
+    document.getElementById('logout').addEventListener('click', function() {
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('userId');
+        window.location.href = "login.html";
+    });
+    window.showDashboardMessage = function(msg, color='green') {
+        const el = document.getElementById('dashboard-message');
+        el.textContent = msg;
+        el.style.color = color;
+    }
+    </script>
 </body>
 </html>

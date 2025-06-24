@@ -6,6 +6,9 @@
     padding: 15px 25px;
     background: #007BFF;
     color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 .logo {
@@ -23,6 +26,11 @@
     font-weight: bold;
 }
 
+.auth-links {
+    display: flex;
+    gap: 15px;
+}
+
 /* ✅ Task Manager */
 .container {
     max-width: 500px;
@@ -31,6 +39,12 @@
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container .navbar {
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+    box-shadow: none;
 }
 
 button.delete-btn {
@@ -74,22 +88,6 @@ li {
 .completed {
     text-decoration: line-through;
     color: gray;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: #007BFF;
-  color: white;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
-
-.auth-links {
-    display: flex;
-    gap: 15px;
 }
 
 .input-wrapper {
